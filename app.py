@@ -2,32 +2,29 @@ todos = []
 stop = False
 
 def get_todos():
-    global todos
     return todos
 
 def add_one_task(title):
-    # your code here
-    pass
+    todos.append(title)
 
 def print_list():
-    global todos
-    pass
+    print(todos)
 
 def delete_task(number_to_delete):
-    # your code here
-    pass
+    del todos[int(number_to_delete)-1]
 
 def save_todos():
     file = open('todos.csv', 'w+') # open the file for writing 'w', create if it doesn't exists
     for item in todos:
         file.write(item + '\n')
     file.close() # close the file
-    pass
 
     
 def load_todos():
-    # your code here
-    pass
+    todos.clear()
+    with open('todos.csv') as file:
+        for line in file.readlines():
+            todos.append(line.strip('\n'))
 
 # Below this code will only run if the entry file running was app.py
 if __name__ == '__main__':
