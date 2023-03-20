@@ -18,7 +18,10 @@ def delete_task(number_to_delete):
     pass
 
 def save_todos():
-    # your code here
+    file = open('todos.csv', 'w+') # open the file for writing 'w', create if it doesn't exists
+    for item in todos:
+        file.write(item + '\n')
+    file.close() # close the file
     pass
 
     
