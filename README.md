@@ -39,3 +39,16 @@ def load_todos():
 - The user can save the todos to a `todos.csv` file
 - The user can retrieve the todos from a `todos.csv` file
 - There is no way to update a task, the user will have to delete and create again.
+
+
+you can run tests...
+
+python test.py
+
+you can check the coverage of your tests...
+
+pip install pytest-cov
+
+pytest --cov-report term-missing --cov=app test.py
+
+
